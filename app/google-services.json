@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "215081007323",
+    "project_id": "cash-ledger",
+    "storage_bucket": "cash-ledger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215081007323:android:13509623cd6f4669c2b4fe",
+        "android_client_info": {
+          "package_name": "com.example.cashledger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215081007323-rgdc0n85ei9n5be0id2jmmqp9hpuoirc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cashledger",
+            "certificate_hash": "0fbb21dfbd8f651c126058100f1b316504d0b6ed"
+          }
+        },
+        {
+          "client_id": "215081007323-tn37khk790ceokj8872oleueuq855ofg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpDcEBaJ5A45o7V_Zmz_5yClUrUYXTWN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215081007323-tn37khk790ceokj8872oleueuq855ofg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:id="@+id/category_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/brown_corner">
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/education_icon"/>
+
+        <TextView
+            android:id="@+id/category_txt"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:text="Education"
+            android:gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/cash_ledger_primary_color"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

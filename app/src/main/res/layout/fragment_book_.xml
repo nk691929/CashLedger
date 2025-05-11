@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Book_Fragment"
+    android:id="@+id/khata_acivity_layout">
+
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/search_res">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchBook"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                app:queryHint="Search Ledger"
+                android:layout_toStartOf="@id/more_btn"
+                android:layout_marginEnd="10dp"
+                android:gravity="end" />
+
+            <ImageView
+                android:id="@+id/more_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/more_ver_blue"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/book_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_book"
+        android:layout_width="140dp"
+        android:layout_height="38dp"
+        android:contentDescription="add customer from contact"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/cash_ledger_primary_color"
+        android:background="@drawable/black_button_res"
+        android:textColor="@color/blueWhite"
+        android:text="+ ADD Ledger "
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
+
+</RelativeLayout>

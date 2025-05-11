@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CashLedger" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorPrimaryVariant">@color/cash_ledger_primary_color</item>
+        <item name="colorOnPrimary">@color/cash_ledger_primary_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

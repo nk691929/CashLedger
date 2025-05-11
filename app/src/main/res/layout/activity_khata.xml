@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.KhataActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customer_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="40dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/search_res"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/customer_layout_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="Gulshad Ahmad"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/customer_layout_more"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/more_ver_blue" />
+
+            <ImageView
+                android:id="@+id/customer_layout_pdf"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/customer_layout_more"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/baseline_picture_as_pdf_24" />
+
+            <ImageView
+                android:id="@+id/customer_layout_share"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/customer_layout_pdf"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/baseline_share_24" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/customer_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customer_layout_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_above="@+id/customer_overAll_amountTv">
+
+        <LinearLayout
+            android:id="@+id/list_titles"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/red_corner"
+            android:backgroundTint="@color/cash_ledger_primary_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/blueWhite"
+                android:text="Date"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/blueWhite"
+                android:text="Given"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/blueWhite"
+                android:text="Taken"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/khata_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_titles"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customer_overAll_amountTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/customer_layout_bottom">
+
+        <TextView
+            android:id="@+id/overAll_amount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Noshad"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#EDEFF0"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/customer_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customer_diye_btn"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/cash_ledger_primary_color"
+            android:background="@drawable/black_button_res"
+            android:textColor="@color/blueWhite"
+            android:textSize="15sp"
+            android:text="Given" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customer_liye_btn"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/redBlack"
+            android:background="@drawable/black_button_res"
+            android:textColor="@color/blueWhite"
+            android:text="Taken"
+            android:layout_alignParentEnd="true"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

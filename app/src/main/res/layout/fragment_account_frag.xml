@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.account_frag">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userInterface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cash_ledger_primary_color"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user_pic_view"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/user_pic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/account_icon_100"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/user_edit"
+                android:layout_toEndOf="@+id/user_pic_view"
+                android:text="Your Name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/user_edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/edit_icon_white"
+                android:backgroundTint="@color/white"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/manage_business_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userInterface"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:background="@color/cardview_shadow_end_color">
+
+        <RelativeLayout
+            android:id="@+id/business_profile_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/manage_profile_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/baseline_business_24" />
+
+            <TextView
+                android:id="@+id/manage_profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/manage_profile_icon"
+                android:gravity="center"
+                android:text="Manage Business Profile"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/business_profile_expand"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/expand_down_blue"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/business_profile_expand_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/business_profile_click"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/search_res"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@drawable/brown_corner"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/business_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"
+                    android:editable="false"
+                    android:background="@null"/>
+                <ImageView
+                    android:id="@+id/business_name_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@drawable/brown_corner"
+                android:layout_below="@id/name_layout"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/business_email_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"
+                    android:editable="false"
+                    android:background="@null"/>
+                <ImageView
+                    android:id="@+id/business_email_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/category_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                android:background="@drawable/brown_corner"-->
+<!--                android:layout_below="@id/email_layout"-->
+<!--                android:layout_marginBottom="10dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/business_category_text"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Category"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:textColor="@color/cash_ledger_primary_color"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:editable="false"-->
+<!--                    android:background="@null"/>-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/business_category_edit"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:src="@drawable/edit_icon"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_centerVertical="true"/>-->
+
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@drawable/brown_corner"
+                android:layout_below="@id/email_layout"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/business_phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"
+                    android:editable="false"
+                    android:background="@null"/>
+                <ImageView
+                    android:id="@+id/business_phone_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/staff_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@drawable/brown_corner"
+                android:layout_below="@id/phone_layout"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/business_staff_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Staff Size"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="bold"
+                    android:editable="false"
+                    android:background="@null"/>
+                <ImageView
+                    android:id="@+id/business_staff_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_business_info"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/staff_layout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/search_res"
+                android:backgroundTint="@color/cash_ledger_primary_color"
+                android:text="Save"
+                android:textColor="@color/blueWhite"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delete_business"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/staff_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/search_res"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/blueWhite"
+                android:text="Delete"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+
+
+        </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/share_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manage_business_profile"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/share_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting_card_layout"
+            android:padding="5dp"
+            android:background="@color/cardview_shadow_end_color">
+
+            <ImageView
+                android:id="@+id/app_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/share_icon" />
+
+            <TextView
+                android:id="@+id/app_share_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Share app"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/app_setting"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textColor="@color/cardview_dark_background"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/about_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_card_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_layout"
+            android:padding="5dp"
+            android:background="@color/cardview_shadow_end_color">
+
+            <ImageView
+                android:id="@+id/app_about"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/about_icon" />
+
+            <TextView
+                android:id="@+id/app_about_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="About Us"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/app_about"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textColor="@color/cardview_dark_background"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logout_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_card_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/logout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_layout"
+            android:padding="5dp"
+            android:background="@color/cardview_shadow_end_color">
+
+            <ImageView
+                android:id="@+id/app_logout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/logout_icon" />
+
+            <TextView
+                android:id="@+id/app_logout_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Logout"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/app_about"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textColor="@color/cardview_dark_background"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/logout_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

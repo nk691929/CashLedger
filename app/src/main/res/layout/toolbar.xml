@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/cash_ledger_primary_color">
+        <RelativeLayout
+            android:id="@+id/switch_Business_layout_toll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/toolbar_icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/book"
+                />
+            <TextView
+                android:id="@+id/business_name_bar"
+                android:layout_width="105dp"
+                android:layout_height="21dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:text="Business"
+                android:layout_toEndOf="@id/toolbar_icon"
+                android:textColor="#fff"
+                />
+            <TextView
+                android:id="@+id/toolbar_switch_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Tap to switch Business"
+                android:textColor="@color/blueWhite"
+                android:layout_below="@id/business_name_bar"
+                android:layout_toEndOf="@id/toolbar_icon"
+                />
+
+            <ImageView
+                android:id="@+id/switch_Bussiness"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/down_arrow"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/toolbar_switch_tv"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
